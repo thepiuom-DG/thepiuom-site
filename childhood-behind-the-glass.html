@@ -65,6 +65,21 @@ li:hover div:has(>img[src*="/edu-"]){animation-play-state:paused;transform:scale
 }
 html,body{overflow-x:clip}
 form input,form textarea,form select{min-width:0;max-width:100%}
+
+.vcard{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.vcard:hover{transform:translateY(-4px);border-color:#3448C5!important;box-shadow:0 18px 40px -24px rgba(52,72,197,.45)}
+.vlink{transition:background .2s ease}.vlink:hover{background:rgba(255,255,255,.16)!important}
+.vnext{transition:border-color .2s ease,background .2s ease}.vnext:hover{border-color:#111114!important;background:#F6F6F8}
+.bpass{transition:transform .25s ease}.bpass:hover{transform:translateY(-3px) rotate(-1deg)}
+.facts>div:last-child{border-right:0!important}
+@media (max-width: 900px){
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .facts>div{border-right:0!important;border-bottom:1px solid #ECECEF}
+  .vlogo{max-width:260px;margin:0 auto}
+  nav[aria-label=Ventures]{padding:20px 20px 0!important}
+  .vsw>a{flex-basis:100%!important}
+  ol[style*="repeat(5"]{grid-template-columns:minmax(0,1fr)!important}
+}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Childhood Behind the Glass | Photography by Ashiqul Haque Priom", "url": "https://thepiuom.com/childhood-behind-the-glass", "description": "Through the glass, a child watches the world go by — surrounded by colors, lights, and celebrations, yet separated from them by something as simple as a…", "inLanguage": "en", "about": {"@id": "https://thepiuom.com/#person"}, "isPartOf": {"@type": "WebSite", "name": "thepiuom", "alternateName": "Ashiqul Haque Priom", "url": "https://thepiuom.com/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ImageObject", "name": "Childhood Behind the Glass", "contentUrl": "https://thepiuom.com/assets/img/story-childhood-behind-the-glass.jpg", "creator": {"@id": "https://thepiuom.com/#person"}, "creditText": "Ashiqul Haque Priom", "copyrightNotice": "© Ashiqul Haque Priom", "description": "Through the glass, a child watches the world go by — surrounded by colors, lights, and celebrations, yet separated from them by something as simple as a window."}</script>
