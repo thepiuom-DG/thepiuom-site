@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://thepiuom.com/a-light-in-the-darkness</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-<url><loc>https://thepiuom.com/a-story-of-hunger</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-<url><loc>https://thepiuom.com/about-ashiqul-haque-priom</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-<url><loc>https://thepiuom.com/ashiqul-haque-priom-achievements</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-<url><loc>https://thepiuom.com/ashiqul-haque-priom-photography</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-<url><loc>https://thepiuom.com/childhood-behind-the-glass</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-<url><loc>https://thepiuom.com/contact-ashiqul-haque-priom</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-<url><loc>https://thepiuom.com/digitiumx</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-<url><loc>https://thepiuom.com/edvancea-global</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-<url><loc>https://thepiuom.com/</loc><lastmod>2026-11-10</lastmod><priority>1.0</priority></url>
-<url><loc>https://thepiuom.com/july-protest-freedom-in-flight</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-<url><loc>https://thepiuom.com/resume</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-<url><loc>https://thepiuom.com/the-daily-grind-of-bangladeshs-shipyard-workers</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-<url><loc>https://thepiuom.com/the-journey-between</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url><loc>https://thepiuom.com/</loc><lastmod>2026-11-10</lastmod><image:image><image:loc>https://thepiuom.com/assets/img/priom-portrait.webp</image:loc></image:image></url>
+<url><loc>https://thepiuom.com/a-light-in-the-darkness</loc><lastmod>2026-11-10</lastmod><image:image><image:loc>https://thepiuom.com/assets/img/story-a-light-in-the-darkness.webp</image:loc></image:image></url>
+<url><loc>https://thepiuom.com/a-story-of-hunger</loc><lastmod>2026-11-10</lastmod><image:image><image:loc>https://thepiuom.com/assets/img/story-a-story-of-hunger.webp</image:loc></image:image></url>
+<url><loc>https://thepiuom.com/about-ashiqul-haque-priom</loc><lastmod>2026-11-10</lastmod><image:image><image:loc>https://thepiuom.com/assets/img/priom-about-1.webp</image:loc></image:image><image:image><image:loc>https://thepiuom.com/assets/img/priom-about-2.webp</image:loc></image:image><image:image><image:loc>https://thepiuom.com/assets/img/priom-about-3.webp</image:loc></image:image></url>
+<url><loc>https://thepiuom.com/ashiqul-haque-priom-achievements</loc><lastmod>2026-11-10</lastmod><image:image><image:loc>https://thepiuom.com/assets/img/achievement-berger-exhibition.webp</image:loc></image:image><image:image><image:loc>https://thepiuom.com/assets/img/achievement-berger-top10.webp</image:loc></image:image><image:image><image:loc>https://thepiuom.com/assets/img/achievement-national-art-carnival.webp</image:loc></image:image><image:image><image:loc>https://thepiuom.com/assets/img/achievement-madrasah-photography.webp</image:loc></image:image><image:image><image:loc>https://thepiuom.com/assets/img/achievement-nagorik-songbad.webp</image:loc></image:image><image:image><image:loc>https://thepiuom.com/assets/img/achievement-ffa-certificate.webp</image:loc></image:image><image:image><image:loc>https://thepiuom.com/assets/img/achievement-aurora-canvas.webp</image:loc></image:image></url>
+<url><loc>https://thepiuom.com/ashiqul-haque-priom-photography</loc><lastmod>2026-11-10</lastmod><image:image><image:loc>https://thepiuom.com/assets/img/story-childhood-behind-the-glass.webp</image:loc></image:image><image:image><image:loc>https://thepiuom.com/assets/img/story-july-protest-freedom-in-flight.webp</image:loc></image:image><image:image><image:loc>https://thepiuom.com/assets/img/story-shipyard-workers.webp</image:loc></image:image><image:image><image:loc>https://thepiuom.com/assets/img/story-a-story-of-hunger.webp</image:loc></image:image><image:image><image:loc>https://thepiuom.com/assets/img/story-the-journey-between.webp</image:loc></image:image><image:image><image:loc>https://thepiuom.com/assets/img/story-a-light-in-the-darkness.webp</image:loc></image:image></url>
+<url><loc>https://thepiuom.com/childhood-behind-the-glass</loc><lastmod>2026-11-10</lastmod><image:image><image:loc>https://thepiuom.com/assets/img/story-childhood-behind-the-glass.webp</image:loc></image:image></url>
+<url><loc>https://thepiuom.com/contact-ashiqul-haque-priom</loc><lastmod>2026-11-10</lastmod></url>
+<url><loc>https://thepiuom.com/digitiumx</loc><lastmod>2026-11-10</lastmod><image:image><image:loc>https://thepiuom.com/assets/img/digitiumx-logo.png</image:loc></image:image><image:image><image:loc>https://thepiuom.com/assets/img/digitiumx-services.webp</image:loc></image:image></url>
+<url><loc>https://thepiuom.com/edvancea-global</loc><lastmod>2026-11-10</lastmod><image:image><image:loc>https://thepiuom.com/assets/img/edvancea-global-logo.png</image:loc></image:image></url>
+<url><loc>https://thepiuom.com/july-protest-freedom-in-flight</loc><lastmod>2026-11-10</lastmod><image:image><image:loc>https://thepiuom.com/assets/img/story-july-protest-freedom-in-flight.webp</image:loc></image:image></url>
+<url><loc>https://thepiuom.com/resume</loc><lastmod>2026-11-10</lastmod></url>
+<url><loc>https://thepiuom.com/the-daily-grind-of-bangladeshs-shipyard-workers</loc><lastmod>2026-11-10</lastmod><image:image><image:loc>https://thepiuom.com/assets/img/story-shipyard-workers.webp</image:loc></image:image></url>
+<url><loc>https://thepiuom.com/the-journey-between</loc><lastmod>2026-11-10</lastmod><image:image><image:loc>https://thepiuom.com/assets/img/story-the-journey-between.webp</image:loc></image:image></url>
 </urlset>
