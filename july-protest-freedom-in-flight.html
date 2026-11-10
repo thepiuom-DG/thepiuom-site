@@ -20,17 +20,25 @@
 *{box-sizing:border-box}img{max-width:100%}
 .mq{display:inline-block;animation:mq 40s linear infinite}
 @keyframes mq{to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.mq{animation:none}}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.fl{animation:fl 6s ease-in-out infinite}.fl:nth-child(2){animation-delay:-1.2s}.fl:nth-child(3){animation-delay:-2.4s}.fl:nth-child(4){animation-delay:-3.6s}.fl:nth-child(5){animation-delay:-4.8s}
+.fl img{transition:transform .25s ease}.fl img:hover{transform:translateY(-3px) scale(1.08)}
+@keyframes edu{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-5px) rotate(-2deg)}}
+div:has(>img[src*="/edu-"]){height:64px!important}
+img[src*="/edu-"]{max-height:48px!important;max-width:120px!important;animation:edu 5s ease-in-out infinite;transition:transform .25s ease}
+li:nth-child(2) img[src*="/edu-"]{animation-delay:-1.25s}li:nth-child(3) img[src*="/edu-"]{animation-delay:-2.5s}li:nth-child(4) img[src*="/edu-"]{animation-delay:-3.75s}
+li:hover img[src*="/edu-"]{animation-play-state:paused;transform:scale(1.08)}
+@media (prefers-reduced-motion:reduce){.mq,.fl,img[src*="/edu-"]{animation:none}}
 .filter[aria-pressed=true]{background:#111114!important;color:#fff!important;border-color:#111114!important}
 .job[hidden]{display:none!important}
 .nav-toggle{display:none!important}
 .dd{position:relative}.ddm{display:none;position:absolute;left:-14px;top:100%;padding:10px;background:#fff;border:1px solid #ECECEF;border-radius:14px;box-shadow:0 12px 30px -12px rgba(17,17,20,.25);z-index:20;min-width:190px}
 .dd:hover .ddm,.dd:focus-within .ddm{display:grid;gap:2px}.ddm a{padding:10px 12px;border-radius:8px;color:#111114;text-decoration:none}.ddm a:hover{background:#F6F6F8}
 @media (max-width: 900px){
-  [style*="grid-template-columns: repeat(12"],[style*="grid-template-columns: repeat(4"],[style*="grid-template-columns: repeat(3"],[style*="grid-template-columns: 180px"],[style*="grid-template-columns: 220px"]{grid-template-columns:1fr!important}
-  [style*="grid-template-columns: repeat(2"]{grid-template-columns:1fr!important}
+  [style*="grid-template-columns: repeat(12"],[style*="grid-template-columns: repeat(4"],[style*="grid-template-columns: repeat(3"],[style*="grid-template-columns: 180px"],[style*="grid-template-columns: 220px"]{grid-template-columns:minmax(0,1fr)!important}
+  [style*="grid-template-columns: repeat(2"]{grid-template-columns:minmax(0,1fr)!important}
   [style*="grid-column"]{grid-column:auto!important;grid-row:auto!important;justify-self:stretch!important}
-  [style*="grid-template-columns: minmax(0, 1fr) 96px"]{grid-template-columns:56px minmax(0,1fr)!important}
+  [style*="grid-template-columns: minmax(0, 1fr) 96px"]{grid-template-columns:56px minmax(0,1fr)!important;column-gap:14px!important}
   .tl-l:empty,.tl-r:empty{display:none}.tl-l{grid-column:2!important;text-align:left!important}.tl-c{grid-row:1;grid-column:1!important}
   h1{font-size:clamp(44px,13vw,72px)!important}
   h2{font-size:clamp(32px,9vw,44px)!important}
@@ -46,7 +54,16 @@
   .hide-sm{display:none!important}
   [style*="height: 620px"],[style*="height: 600px"],[style*="height: 560px"],[style*="height: 520px"],[style*="height: 500px"],[style*="height: 440px"]{height:340px!important}
   .wall{height:auto!important;overflow-x:auto}.wall>div{min-width:150px}
+  .fl{flex-wrap:wrap!important;justify-content:center!important;gap:14px 18px!important;width:100%;padding:14px 16px 18px!important;border-radius:26px!important}
+  .fl>span{flex-basis:100%;text-align:center;background:none!important;color:#111114!important;padding:2px 0 0!important;letter-spacing:.18em!important}
+  section>div:has(+div>.fl){padding-bottom:0!important}section>div:has(>.fl){padding-top:28px!important;gap:14px!important}
+  .fl img[style*="height:30px"]{height:28px!important}.fl img[style*="height:22px"]{height:20px!important;max-width:96px!important}
+  #story [aria-hidden="true"][style*="left: 50%"]{left:48px!important;top:56px!important;bottom:56px!important}
+  .tl-r{grid-column:2!important;text-align:left!important}
+  .tl-l,.tl-r{padding:18px 18px!important}
 }
+html,body{overflow-x:clip}
+form input,form textarea,form select{min-width:0;max-width:100%}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "July Protest — Freedom in Flight | Photography by Ashiqul Haque Priom", "url": "https://thepiuom.com/july-protest-freedom-in-flight", "description": "Like these birds, we too are free — carrying the flag of an independent nation, flying forward with pride. With a spirit shaped by both Islam and freedom,…", "inLanguage": "en", "about": {"@id": "https://thepiuom.com/#person"}, "isPartOf": {"@type": "WebSite", "name": "thepiuom", "alternateName": "Ashiqul Haque Priom", "url": "https://thepiuom.com/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ImageObject", "name": "July Protest — Freedom in Flight", "contentUrl": "https://thepiuom.com/assets/img/story-july-protest-freedom-in-flight.jpg", "creator": {"@id": "https://thepiuom.com/#person"}, "creditText": "Ashiqul Haque Priom", "copyrightNotice": "© Ashiqul Haque Priom", "description": "Like these birds, we too are free — carrying the flag of an independent nation, flying forward with pride."}</script>
