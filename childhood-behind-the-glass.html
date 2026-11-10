@@ -81,6 +81,36 @@ form input,form textarea,form select{min-width:0;max-width:100%}
   .plat{grid-template-columns:repeat(2,minmax(0,1fr))!important}
   ol[style*="repeat(5"]{grid-template-columns:minmax(0,1fr)!important}
 }
+
+.lbx-wrap{margin-top:72px}
+.lbx-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:14px;margin-bottom:16px;border-bottom:1px solid #26262E;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#8A8A95}
+.lbx-head span:first-child{color:#8E9CE8;font-weight:600}
+.lbx{display:flex;gap:10px;height:540px}
+.lb{position:relative;flex:1 1 0;min-width:0;border-radius:14px;overflow:hidden;background:#1A1A1F;color:#fff;text-decoration:none;transition:flex-grow .7s cubic-bezier(.2,.8,.2,1)}
+.lb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.55) contrast(1.05);transform:scale(1.08);transition:filter .7s ease,transform 1.2s ease}
+.lb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,16,0) 45%,rgba(13,13,16,.88) 100%);opacity:0;transition:opacity .6s ease}
+.lb-n{position:absolute;left:16px;top:14px;font-family:'Titillium Web',sans-serif;font-size:13px;letter-spacing:.2em;color:#D6D6DC;z-index:2}
+.lb-v{position:absolute;left:50%;bottom:22px;transform:translateX(-50%) rotate(180deg);writing-mode:vertical-rl;white-space:nowrap;font-family:'Titillium Web',sans-serif;font-weight:600;font-size:17px;letter-spacing:.06em;color:#fff;z-index:2;transition:opacity .4s ease;max-height:calc(100% - 70px);overflow:hidden;text-overflow:ellipsis}
+.lb-cap{position:absolute;left:28px;right:28px;bottom:26px;z-index:2;display:grid;gap:8px;opacity:0;transform:translateY(16px);transition:opacity .45s ease .1s,transform .6s ease .1s}
+.lb-meta{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#8E9CE8}
+.lb-t{font-family:'Titillium Web',sans-serif;font-weight:600;font-size:34px;line-height:1.05;max-width:520px}
+.lb-go{font-weight:600;font-size:15px;color:#fff;border-bottom:1px solid #fff;justify-self:start;padding-bottom:2px}
+.lbx:not(:hover):not(:focus-within) .lb:first-child,.lb:hover,.lb:focus-visible{flex-grow:5.5}
+.lbx:not(:hover):not(:focus-within) .lb:first-child img,.lb:hover img,.lb:focus-visible img{filter:none;transform:scale(1)}
+.lbx:not(:hover):not(:focus-within) .lb:first-child::after,.lb:hover::after,.lb:focus-visible::after{opacity:1}
+.lbx:not(:hover):not(:focus-within) .lb:first-child .lb-v,.lb:hover .lb-v,.lb:focus-visible .lb-v{opacity:0}
+.lbx:not(:hover):not(:focus-within) .lb:first-child .lb-cap,.lb:hover .lb-cap,.lb:focus-visible .lb-cap{opacity:1;transform:none}
+.lb:focus-visible{outline:2px solid #8E9CE8;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.lb,.lb img,.lb-cap{transition:none}}
+@media (max-width: 900px){
+  .lbx-hint{display:none}
+  .lbx{height:auto;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;gap:12px}
+  .lb{flex:0 0 82%!important;height:440px;scroll-snap-align:start}
+  .lb img{filter:none!important;transform:none!important}
+  .lb::after{opacity:1!important}.lb-v{display:none}
+  .lb-cap{opacity:1!important;transform:none!important;left:20px;right:20px;bottom:20px}
+  .lb-t{font-size:26px}
+}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Childhood Behind the Glass | Photography by Ashiqul Haque Priom", "url": "https://thepiuom.com/childhood-behind-the-glass", "description": "Through the glass, a child watches the world go by — surrounded by colors, lights, and celebrations, yet separated from them by something as simple as a…", "inLanguage": "en", "about": {"@id": "https://thepiuom.com/#person"}, "isPartOf": {"@type": "WebSite", "name": "thepiuom", "alternateName": "Ashiqul Haque Priom", "url": "https://thepiuom.com/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ImageObject", "name": "Childhood Behind the Glass", "contentUrl": "https://thepiuom.com/assets/img/story-childhood-behind-the-glass.jpg", "creator": {"@id": "https://thepiuom.com/#person"}, "creditText": "Ashiqul Haque Priom", "copyrightNotice": "© Ashiqul Haque Priom", "description": "Through the glass, a child watches the world go by — surrounded by colors, lights, and celebrations, yet separated from them by something as simple as a window."}</script>
