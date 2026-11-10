@@ -23,12 +23,13 @@
 @keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 .fl{animation:fl 6s ease-in-out infinite}.fl:nth-child(2){animation-delay:-1.2s}.fl:nth-child(3){animation-delay:-2.4s}.fl:nth-child(4){animation-delay:-3.6s}.fl:nth-child(5){animation-delay:-4.8s}
 .fl img{transition:transform .25s ease}.fl img:hover{transform:translateY(-3px) scale(1.08)}
+.hero-frame img{transition:filter .6s ease}.hero-frame:hover img{filter:none!important}
 @keyframes edu{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-5px) rotate(-2deg)}}
-div:has(>img[src*="/edu-"]){height:64px!important}
-img[src*="/edu-"]{max-height:48px!important;max-width:120px!important;animation:edu 5s ease-in-out infinite;transition:transform .25s ease}
-li:nth-child(2) img[src*="/edu-"]{animation-delay:-1.25s}li:nth-child(3) img[src*="/edu-"]{animation-delay:-2.5s}li:nth-child(4) img[src*="/edu-"]{animation-delay:-3.75s}
-li:hover img[src*="/edu-"]{animation-play-state:paused;transform:scale(1.08)}
-@media (prefers-reduced-motion:reduce){.mq,.fl,img[src*="/edu-"]{animation:none}}
+div:has(>img[src*="/edu-"]){width:72px!important;height:72px!important;border-radius:50%;border:1px solid #E3E3EA;background:transparent;justify-content:center!important;overflow:hidden;animation:edu 5s ease-in-out infinite;transition:transform .25s ease,border-color .25s ease}
+img[src*="/edu-"]{max-height:40px!important;max-width:54px!important;object-fit:contain}
+li:nth-child(2) div:has(>img[src*="/edu-"]){animation-delay:-1.25s}li:nth-child(3) div:has(>img[src*="/edu-"]){animation-delay:-2.5s}li:nth-child(4) div:has(>img[src*="/edu-"]){animation-delay:-3.75s}
+li:hover div:has(>img[src*="/edu-"]){animation-play-state:paused;transform:scale(1.08);border-color:#3448C5}
+@media (prefers-reduced-motion:reduce){.mq,.fl,div:has(>img[src*="/edu-"]){animation:none}}
 .filter[aria-pressed=true]{background:#111114!important;color:#fff!important;border-color:#111114!important}
 .job[hidden]{display:none!important}
 .nav-toggle{display:none!important}
