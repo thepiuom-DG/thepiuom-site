@@ -114,6 +114,25 @@ form input,form textarea,form select{min-width:0;max-width:100%}
   .lb-cap{opacity:1!important;transform:none!important;left:20px;right:20px;bottom:20px}
   .lb-t{font-size:26px}
 }
+
+.pf{position:relative;overflow:hidden}
+.pf-lamp{position:absolute;left:21%;top:-150px;width:620px;height:620px;transform:translateX(-50%);pointer-events:none;background:radial-gradient(circle at 50% 0,rgba(142,156,232,.20),rgba(142,156,232,.06) 42%,rgba(142,156,232,0) 70%)}
+.pf-frame{position:relative}
+.pf-plate{position:relative;padding:0 18px 18px 0}
+.pf-plate::before{content:"";position:absolute;top:18px;left:18px;right:0;bottom:0;border:1.5px solid #8E9CE8;border-radius:14px}
+.pf-shot{position:relative;aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:#1A1A1F;box-shadow:0 40px 80px -40px rgba(0,0,0,.9)}
+.pf-shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 22%;filter:grayscale(1) brightness(.9) contrast(1.06);transform:scale(1.03);transition:filter .8s ease,transform 1.4s ease}
+.pf:hover .pf-shot img,.pf:focus-within .pf-shot img{filter:none;transform:scale(1)}
+@media (prefers-reduced-motion:reduce){.pf-shot img{transition:none}}
+@media (max-width: 900px){
+  .pf{padding:64px 20px 0!important}
+  .pf-grid{grid-template-columns:minmax(0,1fr)!important;gap:32px!important}
+  .pf-frame,.pf-grid>div{grid-column:1/-1!important}
+  .pf-frame{max-width:340px;margin:0 auto!important}
+  .pf-lamp{left:50%;width:420px;height:420px;top:-80px}
+  .pf h2{font-size:38px!important}
+  .pf-shot img{filter:none!important;transform:none!important}
+}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Contact Ashiqul Haque Priom | Get in Touch", "url": "https://thepiuom.com/contact-ashiqul-haque-priom", "description": "Contact Ashiqul Haque Priom for business, digital marketing, e-commerce, photography and collaborations in Malaysia and worldwide.", "inLanguage": "en", "about": {"@id": "https://thepiuom.com/#person"}, "isPartOf": {"@type": "WebSite", "name": "thepiuom", "alternateName": "Ashiqul Haque Priom", "url": "https://thepiuom.com/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thepiuom.com/"}, {"@type": "ListItem", "position": 2, "name": "Contact Ashiqul Haque Priom", "item": "https://thepiuom.com/contact-ashiqul-haque-priom"}]}</script>
