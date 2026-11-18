@@ -26,7 +26,8 @@
 @keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 .fl{animation:fl 6s ease-in-out infinite}.fl:nth-child(2){animation-delay:-1.2s}.fl:nth-child(3){animation-delay:-2.4s}.fl:nth-child(4){animation-delay:-3.6s}.fl:nth-child(5){animation-delay:-4.8s}
 .fl img{transition:transform .25s ease}.fl img:hover{transform:translateY(-3px) scale(1.08)}
-.hero-frame img{transition:filter .6s ease}.hero-frame:hover img{filter:none!important}
+.hero-frame img{transition:transform 1.3s ease,filter .6s ease}
+.hero-frame:hover img{transform:scale(1.04);filter:brightness(1.07) contrast(1.03)}
 @keyframes edu{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-5px) rotate(-2deg)}}
 div:has(>img[src*="/edu-"]){width:72px!important;height:72px!important;border-radius:50%;border:1px solid #E3E3EA;background:transparent;justify-content:center!important;overflow:hidden;animation:edu 5s ease-in-out infinite;transition:transform .25s ease,border-color .25s ease}
 img[src*="/edu-"]{max-height:40px!important;max-width:54px!important;object-fit:contain}
