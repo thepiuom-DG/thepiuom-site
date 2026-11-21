@@ -96,13 +96,12 @@ form input,form textarea,form select{min-width:0;max-width:100%}
  animation:vscan 11s linear infinite}
 @keyframes vscan{0%{transform:translateY(-160px)}60%,100%{transform:translateY(var(--vh,720px))}}
 /* brand plate: the wordmark is near-black, so it needs a light panel to read on black */
-.vplate{position:relative;display:flex;align-items:center;justify-content:center;padding:14px 0 40px}
-.vplate-card{position:relative;width:100%;background:#fff;border-radius:22px;padding:40px 34px;display:flex;align-items:center;justify-content:center;
- box-shadow:0 36px 80px -34px rgba(52,72,197,.75),inset 0 1px 0 rgba(255,255,255,.9);animation:vfloat 7s ease-in-out infinite}
-.vplate-card img{width:100%;height:auto;max-width:330px;display:block}
-.vplate-pool{position:absolute;left:50%;bottom:10px;width:86%;height:90px;transform:translateX(-50%);pointer-events:none;
- background:radial-gradient(ellipse at 50% 0,rgba(52,72,197,.60),rgba(52,72,197,.14) 45%,rgba(52,72,197,0) 72%);filter:blur(14px)}
-@keyframes vfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.vplate{position:relative;display:flex;align-items:center;justify-content:center;padding:10px 0 26px}
+.vplate-card{position:relative;width:100%;background:#fff;border-radius:18px;padding:36px 30px;display:flex;align-items:center;justify-content:center;
+ box-shadow:0 26px 60px -34px rgba(0,0,0,.8)}
+.vplate-card img{width:100%;height:auto;max-width:320px;display:block}
+.vplate-pool{position:absolute;left:50%;bottom:4px;width:76%;height:56px;transform:translateX(-50%);pointer-events:none;
+ background:radial-gradient(ellipse at 50% 0,rgba(52,72,197,.34),rgba(52,72,197,0) 72%);filter:blur(12px)}
 
 .vstats>div:first-child{border-left:0!important}
 
@@ -184,7 +183,7 @@ form input,form textarea,form select{min-width:0;max-width:100%}
 
 @media (prefers-reduced-motion:reduce){
   .vtab,.vmod,.vlink,.vnext,.vmod-bar{transition:none}
-  .vglow,.vdark::after,.vtape-run,.bpass-plane svg,.vplate-card{animation:none}
+  .vglow,.vdark::after,.vtape-run,.bpass-plane svg{animation:none}
   [data-reveal] .vrow .vflip{opacity:1;transform:none}
 }
 
