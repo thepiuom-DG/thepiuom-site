@@ -88,11 +88,20 @@ form input,form textarea,form select{min-width:0;max-width:100%}
  background-size:64px 64px;
  -webkit-mask-image:radial-gradient(ellipse 70% 70% at 60% 25%,#000,transparent 75%);mask-image:radial-gradient(ellipse 70% 70% at 60% 25%,#000,transparent 75%)}
 .vglow{position:absolute;top:-22%;right:-6%;width:760px;height:760px;pointer-events:none;
- background:radial-gradient(circle at 50% 50%,rgba(52,72,197,.42),rgba(52,72,197,.10) 45%,transparent 70%)}
-.vmark{aspect-ratio:1/1;border-radius:26px;display:flex;align-items:center;justify-content:center;padding:34px;position:relative;overflow:hidden}
-.vmark img{position:relative;width:100%;height:auto;max-height:100%;object-fit:contain}
-.vmark-d{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)}
-.vmark-d::before{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.08);border-radius:16px}
+ background:radial-gradient(circle at 50% 50%,rgba(52,72,197,.42),rgba(52,72,197,.10) 45%,transparent 70%);
+ animation:vbreathe 9s ease-in-out infinite}
+@keyframes vbreathe{0%,100%{opacity:.75;transform:scale(1)}50%{opacity:1;transform:scale(1.07)}}
+.vdark::after{content:"";position:absolute;left:0;right:0;top:0;height:140px;pointer-events:none;
+ background:linear-gradient(180deg,transparent,rgba(142,156,232,.16) 45%,rgba(142,156,232,.30) 50%,rgba(142,156,232,.16) 55%,transparent);
+ animation:vscan 11s linear infinite}
+@keyframes vscan{0%{transform:translateY(-160px)}60%,100%{transform:translateY(var(--vh,720px))}}
+/* brand plate: the wordmark is dark navy, so it needs a lit white panel to read on black */
+.vplate{position:relative;display:flex;align-items:center;justify-content:center;padding:26px 0 44px}
+.vplate-card{position:relative;width:100%;background:#fff;border-radius:18px;padding:40px 30px;display:flex;align-items:center;justify-content:center;
+ box-shadow:0 30px 70px -30px rgba(52,72,197,.65),0 0 0 1px rgba(255,255,255,.14)}
+.vplate-card img{width:100%;height:auto;max-width:300px;display:block}
+.vplate-pool{position:absolute;left:50%;bottom:6px;width:78%;height:70px;transform:translateX(-50%);pointer-events:none;
+ background:radial-gradient(ellipse at 50% 0,rgba(52,72,197,.55),rgba(52,72,197,0) 70%);filter:blur(10px)}
 
 .vstats>div:first-child{border-left:0!important}
 
@@ -102,15 +111,21 @@ form input,form textarea,form select{min-width:0;max-width:100%}
 .vmod-d{border-bottom-color:#2E2E36}
 .vmod:hover{background:#F6F6F8;padding-left:20px}
 .vmod-d:hover{background:rgba(255,255,255,.04)}
-.vmod-n{font-family:'Titillium Web',sans-serif;font-size:15px;letter-spacing:.14em;padding-top:6px}
+.vmod-bar{height:2px;width:34px;margin-top:17px;background:#DCDCE2;transition:width .3s ease,background .3s ease}
+.vmod-d .vmod-bar{background:#3A3A44}
+.vmod:hover .vmod-bar{width:60px;background:#3448C5}
 .vmod-r{align-self:center;width:34px;height:34px;border-radius:50%;border:1px solid #DCDCE2;position:relative;color:#111114;transition:background .25s ease,border-color .25s ease,color .25s ease}
 .vmod-d .vmod-r{border-color:#3A3A44;color:#fff}
 .vmod-r::after{content:"";position:absolute;left:11px;top:13px;width:9px;height:9px;border-right:1.5px solid currentColor;border-top:1.5px solid currentColor;transform:rotate(45deg);opacity:.55}
 .vmod:hover .vmod-r{background:#3448C5;border-color:#3448C5;color:#fff}
 
-.vplats{margin-top:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.vplat{display:flex;align-items:center;gap:12px;min-height:60px;padding:12px 16px;border:1px solid #ECECEF;border-radius:14px;background:#fff;transition:border-color .2s ease,transform .2s ease}
-.vplat:hover{border-color:#3448C5;transform:translateY(-2px)}
+.vtape{margin-top:18px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.vtape-run{display:flex;gap:10px;width:max-content;animation:vroll 34s linear infinite}
+.vtape-rev .vtape-run{animation-duration:46s;animation-direction:reverse}
+.vtape:hover .vtape-run{animation-play-state:paused}
+@keyframes vroll{to{transform:translateX(-50%)}}
+.vplat{flex:0 0 auto;display:flex;align-items:center;gap:12px;min-height:58px;padding:12px 18px;border:1px solid #ECECEF;border-radius:14px;background:#fff}
+.vsr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 .vtrack{list-style:none;margin:0;padding:0;display:grid;gap:22px}
 .vstep{position:relative;padding:26px 0 0;border-top:1px solid var(--vline)}
@@ -126,7 +141,8 @@ form input,form textarea,form select{min-width:0;max-width:100%}
 .bpass-v{display:block;font-family:'Titillium Web',sans-serif;font-weight:700;font-size:38px;line-height:1.05}
 .bpass-s{display:block;font-size:13px;color:#55555F}
 .bpass-plane{flex:1;display:flex;align-items:center;justify-content:center;color:#3448C5;border-top:1px dashed #D6D6DE;margin-top:14px}
-.bpass-plane svg{width:22px;height:22px;background:#fff;padding:0 10px;box-sizing:content-box;transform:translateY(1px)}
+.bpass-plane svg{width:22px;height:22px;background:#fff;padding:0 10px;box-sizing:content-box;animation:vtaxi 7s ease-in-out infinite}
+@keyframes vtaxi{0%,100%{transform:translate(-26%,1px)}50%{transform:translate(26%,1px)}}
 .bpass-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:0 24px 22px}
 .bpass-d{display:block;margin-top:4px;font-family:'Titillium Web',sans-serif;font-weight:600;font-size:16px}
 .bpass-stub{display:flex;justify-content:space-between;gap:12px;padding:14px 24px;background:#111114}
@@ -141,6 +157,10 @@ form input,form textarea,form select{min-width:0;max-width:100%}
  font-family:'Titillium Web',sans-serif;color:#fff;transition:background .2s ease}
 .vrow:last-child{border-bottom:0}
 .vrow:not(.vrow-h):hover{background:rgba(255,255,255,.04)}
+.vflip{display:inline-block;transform-origin:50% 0;backface-visibility:hidden}
+[data-reveal] .vrow .vflip{opacity:0;transform:rotateX(-92deg)}
+[data-reveal].is-in .vrow .vflip{animation:vflap .5s cubic-bezier(.2,.9,.25,1) var(--d,0ms) both}
+@keyframes vflap{0%{opacity:0;transform:rotateX(-92deg)}55%{opacity:1;transform:rotateX(12deg)}100%{opacity:1;transform:rotateX(0)}}
 .vrow-h{padding-top:14px;padding-bottom:14px}
 .vcode{font-size:15px;letter-spacing:.1em;color:#F0B429}
 .vrow-h .vcode,.vrow-h .vto,.vrow-h .vcity,.vrow-h .vstatus{color:#6A6A75;font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase}
@@ -161,7 +181,11 @@ form input,form textarea,form select{min-width:0;max-width:100%}
 .vnext:hover{border-color:#111114;background:#F6F6F8}
 .vnext-go{width:56px;height:56px;border-radius:50%;background:#111114;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:22px}
 
-@media (prefers-reduced-motion:reduce){.vtab,.vmod,.vplat,.vlink,.vnext{transition:none}}
+@media (prefers-reduced-motion:reduce){
+  .vtab,.vmod,.vlink,.vnext,.vmod-bar{transition:none}
+  .vglow,.vdark::after,.vtape-run,.bpass-plane svg{animation:none}
+  [data-reveal] .vrow .vflip{opacity:1;transform:none}
+}
 
 @media (max-width: 900px){
   nav[aria-label=Ventures]{padding:20px 20px 0!important}
@@ -170,17 +194,18 @@ form input,form textarea,form select{min-width:0;max-width:100%}
   .vhero{grid-template-columns:minmax(0,1fr)!important;gap:30px!important}
   .vhero>div{grid-column:1/-1!important}
   .vhero h1{font-size:44px!important}
-  .vmark{max-width:230px;margin:0 auto}
+  .vplate{max-width:320px;margin:0 auto;padding-bottom:34px}
   .vstats{grid-template-columns:repeat(2,minmax(0,1fr))!important}
   .vstats>div{border-left:0!important;border-top:1px solid #ECECEF;padding:16px 0!important}
   .vdark .vstats>div{border-top-color:#2E2E36}
-  .vmod{grid-template-columns:48px minmax(0,1fr)!important;gap:14px!important;padding:24px 0!important}
+  .vmod{grid-template-columns:40px minmax(0,1fr)!important;gap:14px!important;padding:24px 0!important}
   .vmod:hover{padding-left:0!important}
   .vmod-r{display:none}
   .vmod h3{font-size:23px!important}
   .vsplit{grid-template-columns:minmax(0,1fr)!important;gap:28px!important}
   .vsplit>div{grid-column:1/-1!important}
-  .vplats{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .vplate-card{padding:28px 22px}
+  .vplate-card img{max-width:220px}
   .vtrack{grid-template-columns:minmax(0,1fr)!important}
   .vboard{border-radius:18px}
   .vboard-head{padding:16px 18px}
@@ -376,6 +401,11 @@ form input,form textarea,form select{min-width:0;max-width:100%}
 (function(){
 var h=document.querySelector('header'),b=document.querySelector('.nav-toggle');
 if(b)b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+var mo=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var rv=document.querySelectorAll('[data-reveal]');
+if(rv.length){if(mo||!('IntersectionObserver' in window)){rv.forEach(function(x){x.classList.add('is-in')})}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target)}})},{threshold:0.2});
+rv.forEach(function(x){io.observe(x)})}}
 var fs=document.querySelectorAll('.filter');
 fs.forEach(function(x){x.addEventListener('click',function(){var f=x.getAttribute('data-f');
 fs.forEach(function(y){y.setAttribute('aria-pressed',y===x)});
